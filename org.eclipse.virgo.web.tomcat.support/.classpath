@@ -21,7 +21,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="var" path="WEB_IVY_CACHE/org.apache.catalina/com.springsource.org.apache.catalina/7.0.12/com.springsource.org.apache.catalina-7.0.12.jar" sourcepath="/WEB_IVY_CACHE/org.apache.catalina/com.springsource.org.apache.catalina/7.0.12/com.springsource.org.apache.catalina-sources-7.0.12.jar"/>
+	<classpathentry kind="var" path="WEB_IVY_CACHE/org.apache.catalina/com.springsource.org.apache.catalina/7.0.21/com.springsource.org.apache.catalina-7.0.21.jar" sourcepath="/WEB_IVY_CACHE/org.apache.catalina/com.springsource.org.apache.catalina/7.0.21/com.springsource.org.apache.catalina-sources-7.0.21.jar"/>
 	<classpathentry kind="var" path="WEB_IVY_CACHE/javax.servlet/javax.servlet/3.0.0.v201103241009/javax.servlet-3.0.0.v201103241009.jar" sourcepath="/WEB_IVY_CACHE/javax.servlet/javax.servlet/3.0.0.v201103241009/javax.servlet-sources-3.0.0.v201103241009.jar"/>
 	<classpathentry kind="var" path="WEB_IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.7.0.v20110613/org.eclipse.osgi-3.7.0.v20110613.jar" sourcepath="/WEB_IVY_CACHE/org.eclipse.osgi/org.eclipse.osgi/3.7.0.v20110613/org.eclipse.osgi-sources-3.7.0.v20110613.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.eclipse.virgo.web.core"/>
