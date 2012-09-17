@@ -35,7 +35,7 @@ final class ServerClassLoaderCustomizer implements ClassLoaderCustomizer {
 	    if (dependencies.length > 0) {
 	        return AccessController.doPrivileged(new PrivilegedAction<ClassLoader[]>() {
                 public ClassLoader[] run() {
-                    return new ClassLoader[] {new FindResourceDelegatingClassLoader(dependencies)};                    
+                    return new ClassLoader[] {new FindResourceDelegatingClassLoader(dependencies), new LoadClassDelegatingClassLoader(dependencies)};                    
                 }	            
             });
 	    } else {
