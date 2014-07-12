@@ -66,7 +66,7 @@ public abstract class AbstractWebIntegrationTests {
 
     private static final long WEB_PLAN_DEPLOY_TIMEOUT = 5*60*1000; // 5 minutes
 
-	private static final String CURRENT_VERSION = "3.6.2";
+	private static final String CURRENT_VERSION = "3.6.3";
 
     private static final String USER_REGION_NAME = "org.eclipse.virgo.region.user";
 
