@@ -1,0 +1,73 @@
+project(':web:org.eclipse.virgo.web.core') {
+    dependencies {
+		testCompile group: 'org.easymock', name: 'easymock', version: easymockVersion
+        testCompile group: "org.springframework", name: "org.springframework.test", version: springframeworkVersion, configuration: "compile", ext: "jar"
+		testCompile project(':test:org.eclipse.virgo.test.stubs')
+		testCompile project(':kernel:org.eclipse.virgo.kernel.stubs')
+
+        compile group: "org.eclipse.virgo.mirrored", name: "org.slf4j.api", version: slf4jVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "javax.servlet", version: javaxServletVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.osgi", version: equinoxVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.osgi.services", version: osgiServicesVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.gemini", name: "org.eclipse.gemini.web.core", version: geminiWebVersion, configuration: "compile", ext: "jar"
+
+		compile project(':util:org.eclipse.virgo.util.common')
+		compile project(':util:org.eclipse.virgo.util.osgi.manifest')
+		compile project(':medic:org.eclipse.virgo.medic')
+		compile project(':nano:org.eclipse.virgo.nano.core')
+		compile project(':nano:org.eclipse.virgo.nano.deployer.api')
+		compile project(':repository:org.eclipse.virgo.repository')
+		compile project(':kernel:org.eclipse.virgo.kernel.artifact')
+		compile project(':kernel:org.eclipse.virgo.kernel.deployer')
+		compile project(':kernel:org.eclipse.virgo.kernel.equinox.extensions')
+	}
+}
+
+project(':web:org.eclipse.virgo.web.dm') {
+    dependencies {
+		testCompile group: 'org.easymock', name: 'easymock', version: easymockVersion
+
+        compile group: "org.eclipse.virgo.mirrored", name: "org.slf4j.api", version: slf4jVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.osgi", version: equinoxVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "javax.servlet", version: javaxServletVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.springframework", name: "org.springframework.core", version: springframeworkVersion, configuration: "compile", ext: "jar"
+        compile group: "org.springframework", name: "org.springframework.beans", version: springframeworkVersion, configuration: "compile", ext: "jar"
+        compile group: "org.springframework", name: "org.springframework.context", version: springframeworkVersion, configuration: "compile", ext: "jar"
+        compile group: "org.springframework", name: "org.springframework.web", version: springframeworkVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.gemini", name: "org.eclipse.gemini.blueprint.core", version: geminiBlueprintVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.gemini", name: "org.eclipse.gemini.blueprint.extender", version: geminiBlueprintVersion, configuration: "compile", ext: "jar"
+	}
+}
+
+project(':web:org.eclipse.virgo.web.tomcat.support') {
+    dependencies {
+        compile group: "org.eclipse.virgo.mirrored", name: "javax.servlet", version: javaxServletVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.apache.catalina", version: tomcatVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.osgi", version: equinoxVersion, configuration: "compile", ext: "jar"
+
+        compile group: "org.eclipse.gemini", name: "org.eclipse.gemini.web.tomcat", version: geminiWebVersion, configuration: "compile", ext: "jar"
+
+		compile project(':util:org.eclipse.virgo.util.io')
+		compile project(':util:org.eclipse.virgo.util.math')
+		compile project(':medic:org.eclipse.virgo.medic')
+		compile project(':nano:org.eclipse.virgo.nano.core')
+		compile project(':kernel:org.eclipse.virgo.kernel.osgi')
+		compile project(':web:org.eclipse.virgo.web.core')
+	}
+}
+
+project(':web:org.eclipse.virgo.web.enterprise.openejb.jpa.integration') {
+    dependencies {
+        compile group: "org.eclipse.virgo.mirrored", name: "javax.transaction", version: javaxTransactionVersion, configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.persistence.core", version: "2.4.1.v20121003-ad44345", configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.apache.openejb.core", version: "4.5.2.virgo-2", configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.apache.openejb.loader", version: "4.5.2", configuration: "compile", ext: "jar"
+        compile group: "org.hibernate", name: "com.springsource.org.hibernate", version: "4.1.0.Final", configuration: "compile", ext: "jar"
+	}
+}
