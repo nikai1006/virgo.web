@@ -1,0 +1,19 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise Security Integration'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.security')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        attributes( 'Fragment-Host': "org.apache.openejb.core" )
+    }
+}
+/*
+: 
+Import-Template: org.apache.catalina.*;version="0",
+ org.apache.openejb.*;version="0",
+ javax.security.auth.*;version="0"
+Export-Package: org.eclipse.virgo.web.enterprise.security
+*/

@@ -1,0 +1,25 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise OpenEjb Initaliser'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.openejb.initialiser')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        // TODO check Require-Bundle header
+        attributes( 'Require-Bundle': "org.apache.openejb.core" )
+        attributes( 'Bundle-Activator': "org.eclipse.virgo.web.enterprise.openejb.initialiser.Activator" )
+    }
+}
+/*
+Import-Template: org.osgi.framework;version="0",
+ org.apache.openejb.assembler.classic;version="${org.apache.openejb.core:[=.=.=, +1)}",
+ org.apache.openejb.spi;version="${org.apache.openejb.core:[=.=.=, +1)}",
+ org.apache.openejb.core;version="${org.apache.openejb.core:[=.=.=, +1)}",
+ org.apache.openejb.util;version="${org.apache.openejb.core:[=.=.=, +1)}",
+ org.apache.openejb.loader;version="${org.apache.openejb.loader:[=.=.=, +1)}",
+ org.apache.openejb;version="0",
+ org.apache.naming;version="${org.apache.catalina:[=.=.=, +1)}",
+ javax.naming;version="0"
+*/

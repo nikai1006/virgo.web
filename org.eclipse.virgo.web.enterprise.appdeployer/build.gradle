@@ -1,0 +1,11 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise App Deployer'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.appdeployer')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Service-Component': "OSGI-INF/virgo.web.enterprise.appdeployer.deployer.xml" )
+    }
+}

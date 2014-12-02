@@ -1,0 +1,18 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'OpenEjb integration with OpenWebBeans'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.openejb.fragment.webbeans')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Fragment-Host': "org.apache.openejb.core" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        instruction 'Import-Package', 'org.apache.webbeans.ee.beans'
+        instruction 'Import-Package', 'org.apache.webbeans.ee.common.beans'
+        instruction 'Import-Package', 'org.apache.webbeans.jsf'
+        instruction 'Import-Package', 'org.apache.webbeans.jsf.plugin'
+        instruction 'Import-Package', 'org.apache.webbeans.web.tomcat'
+        instruction 'Import-Package', 'org.slf4j.spi'
+    }
+}

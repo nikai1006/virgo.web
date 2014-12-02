@@ -1,0 +1,11 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = ''
+        attributes( 'Bundle-SymbolicName': '')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Service-Component': "OSGI-INF/" )
+    }
+}

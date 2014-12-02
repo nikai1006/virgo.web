@@ -1,0 +1,15 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise javax.persistence Fragment'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.javax.persistence.extension')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        attributes( 'Fragment-Host': "javax.persistence" ) // ;bundle-version="[2.0.4, 2.1.0)
+        instruction 'Import-Package', '!javax.persistence'
+        instruction 'Import-Package', '!javax.persistence.spi'
+        instruction 'Import-Package', '!org.eclipse.persistence.javax.persistence.osgi'
+    }
+}

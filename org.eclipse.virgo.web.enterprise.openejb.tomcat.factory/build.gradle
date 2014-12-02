@@ -1,0 +1,15 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise OpenEJB Generic Service Provider'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.openejb.tomcat.factory')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        attributes( 'Fragment-Host': "org.apache.openejb.core" )
+        instruction 'Import-Package', '!org.apache.openejb.util'
+        instruction 'Import-Package', '!org.apache.naming'
+        instruction 'Export-Package', '!*'
+    }
+}

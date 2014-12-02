@@ -1,0 +1,14 @@
+apply plugin: 'osgi'
+
+jar {
+    manifest {
+        version = project.version
+        name = 'Virgo Web Enterprise OpenEjb Transaction Integration'
+        attributes( 'Bundle-SymbolicName': 'org.eclipse.virgo.web.enterprise.openejb.fragment.jotm')
+        attributes( 'Built-By': "Gradle ${gradle.gradleVersion}" )
+        attributes( 'Bundle-RequiredExecutionEnvironment': "JavaSE-1.6" )
+        attributes( 'Fragment-Host': "org.apache.openejb.core" )
+        instruction 'Import-Package', 'javax.transaction'
+        instruction 'Import-Package', 'org.objectweb.jotm'
+    }
+}
