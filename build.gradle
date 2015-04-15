@@ -87,10 +87,10 @@ project(':web:org.eclipse.virgo.web.tomcat.support') {
 project(':web:org.eclipse.virgo.web.enterprise.openejb.jpa.integration') {
     dependencies {
         compile group: "org.eclipse.virgo.mirrored", name: "javax.transaction", version: javaxTransactionVersion, configuration: "compile", ext: "jar"
-        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.persistence.core", version: "2.4.1.v20121003-ad44345", configuration: "compile", ext: "jar"
+        compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.persistence.core", version: eclipsePersistenceCoreVersion, configuration: "compile", ext: "jar"
         compile group: "org.eclipse.virgo.mirrored", name: "org.apache.openejb.core", version: apacheOpenejbCoreVersion, configuration: "compile", ext: "jar"
         compile group: "org.eclipse.virgo.mirrored", name: "org.apache.openejb.loader", version: apacheOpenejbVersion, configuration: "compile", ext: "jar"
-        compile group: "org.hibernate", name: "com.springsource.org.hibernate", version: "4.1.0.Final", configuration: "compile", ext: "jar"
+        compile group: "org.hibernate", name: "com.springsource.org.hibernate", version: hibernateVersion, configuration: "compile", ext: "jar"
     }
 }
 
@@ -167,6 +167,9 @@ project(':web:org.eclipse.virgo.web.enterprise.openejb.fragment.jotm') {
 
 project(':web:org.eclipse.virgo.web.enterprise.openejb.fragment.jpa') { dependencies { } }
 
+// TODO - check oev.web.enterprise.openejb.fragment.webbeans
+project(':web:org.eclipse.virgo.web.enterprise.openejb.fragment.webbeans') { dependencies { } }
+
 project(':web:org.eclipse.virgo.web.enterprise.openejb.initialiser') {
     dependencies {
         compile group: "org.eclipse.virgo.mirrored", name: "org.eclipse.osgi", version: equinoxVersion, configuration: "compile", ext: "jar"
@@ -192,9 +195,6 @@ project(':web:org.eclipse.virgo.web.enterprise.openejb.tomcat.factory') {
         compile group: "org.eclipse.virgo.mirrored", name: "org.apache.tomcat.api", version: apacheCatalinaVersion, configuration: "compile", ext: "jar"
     }
 }
-
-// TODO - check oev.web.enterprise.openejb.fragment.webbeans
-project(':web:org.eclipse.virgo.web.enterprise.openejb.fragment.webbeans') { dependencies { } }
 
 project(':web:org.eclipse.virgo.web.enterprise.openwebbeans.initialiser') {
     dependencies {
