@@ -57,7 +57,7 @@ public class ClassLoaderJarScanner implements JarScanner {
     public void scan(ServletContext servletContext, ClassLoader classLoader, JarScannerCallback jarScannerCallback, Set<String> jarsToSkip) {
         for (Bundle bundle : this.bundles) {
             scanBundle(bundle, jarScannerCallback);
-        }    
+        }
     }
 
     private void scanBundle(Bundle bundle, JarScannerCallback callback) {
